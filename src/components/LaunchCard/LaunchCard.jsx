@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { MoonLoader } from "react-spinners";
 import "./LaunchCard.css";
 import { PREVIOUS_API, UPCOMING_API } from "../../constants";
@@ -25,13 +25,10 @@ const LaunchCard = ({ upcoming }) => {
   const { launchpadName } = useLaunchpad(launch?.launchpad_name);
 
   const upComing = async () => {
-    setloading(true)
+    setloading(true);
     const data = await fetch(upcoming ? UPCOMING_API : PREVIOUS_API);
-    setloading(false)
+    setloading(false);
     const JsonData = await data.json();
-    console.log("JSONDATA", JsonData);
-
-    // setupcomingData(JsonData);
     setData(JsonData);
     setLaunch({
       mission_name: JsonData.name,
@@ -55,9 +52,7 @@ const LaunchCard = ({ upcoming }) => {
           <div className="upcoming-launch-header">
             {upcoming ? "Upcoming Launch" : "Previous Launch"}
           </div>
-          <div
-            className="upcoming-launch-wrapper-upper"
-          >
+          <div className="upcoming-launch-wrapper-upper">
             <div className="upcoming-launch-info">
               <div className="launch-detail">
                 <div className="launch-label">MISSION NAME</div>
@@ -108,7 +103,11 @@ const LaunchCard = ({ upcoming }) => {
                 <p>LINKS</p>
                 <div className="links-container">
                   {data?.links?.wikipedia ? (
-                    <Link to={data?.links?.wikipedia} className="link-icon" target="_blank">
+                    <Link
+                      to={data?.links?.wikipedia}
+                      className="link-icon"
+                      target="_blank"
+                    >
                       <img src={wiki} alt="wiki" />
                     </Link>
                   ) : (
@@ -117,7 +116,11 @@ const LaunchCard = ({ upcoming }) => {
                     </div>
                   )}
                   {data?.links?.webcast ? (
-                    <Link to={data?.links?.webcast} className="link-icon" target="_blank">
+                    <Link
+                      to={data?.links?.webcast}
+                      className="link-icon"
+                      target="_blank"
+                    >
                       <img src={youtubeLogo} alt="youtube" />
                     </Link>
                   ) : (
@@ -143,21 +146,23 @@ const LaunchCard = ({ upcoming }) => {
             </div>
 
             <div className="launch-detail">
-              <div className="launch-label">{upcoming ? 'LAUNCHPAD' : 'CREW'}</div>
-              {
-                upcoming ? (
-                  <div className="launch-value">{launchpadName || "N/A"}</div>
-
-                ) : (
-                 <div>
-                  {
-                     data?.crew?.map((i) => (
-                      <img key={i} src={crew} alt='crew' className='xl:w-7 lg:w-5 w-6' />
-                  ))
-                  }
-                 </div>
-                )
-              }
+              <div className="launch-label">
+                {upcoming ? "LAUNCHPAD" : "CREW"}
+              </div>
+              {upcoming ? (
+                <div className="launch-value">{launchpadName || "N/A"}</div>
+              ) : (
+                <div>
+                  {data?.crew?.map((i) => (
+                    <img
+                      key={i}
+                      src={crew}
+                      alt="crew"
+                      className="xl:w-7 lg:w-5 w-6"
+                    />
+                  ))}
+                </div>
+              )}
             </div>
           </div>
         </>

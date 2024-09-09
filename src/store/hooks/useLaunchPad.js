@@ -1,17 +1,17 @@
-import React, { useEffect, useState } from 'react'
-import { LAUNCHPADNAME_API } from '../../constants';
+import React, { useEffect, useState } from "react";
+import { LAUNCHPADNAME_API } from "../../constants";
 
 const useLaunchpad = (launchID) => {
-    const [launchpadName, setLaunxhpadName] = useState('');
-    useEffect(() => {
-        getLaunchPadInfo();
-    }, [launchID]);
-    const getLaunchPadInfo = async () => {
-        const response = await fetch(LAUNCHPADNAME_API + launchID);
-        const dataJson = await response.json();
-        setLaunxhpadName(dataJson?.name)
-    }
-    return { launchpadName };
-}
+  const [launchpadName, setLaunxhpadName] = useState("");
+  useEffect(() => {
+    getLaunchPadInfo();
+  }, [launchID]);
+  const getLaunchPadInfo = async () => {
+    const response = await fetch(LAUNCHPADNAME_API + launchID);
+    const dataJson = await response.json();
+    setLaunxhpadName(dataJson?.name);
+  };
+  return { launchpadName };
+};
 
-export default useLaunchpad
+export default useLaunchpad;

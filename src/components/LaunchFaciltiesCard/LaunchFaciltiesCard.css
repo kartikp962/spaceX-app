@@ -1,98 +1,102 @@
-/* LaunchFacilitiesCard.css */
 .card {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    width: 23rem;
-    height: 6.5rem;
-    padding-top: 0.5rem;
-    padding-left: 0.75rem;
-    padding-right: 0.75rem;
-    margin-top: -1rem;
-    margin-left: -0.5rem;
-    border-radius: 1rem;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-  }
-  
-  /* Extra large screens */
-  @media (max-width: 1280px) {
-    .card {
-      width: 22rem;
-      height: 6rem;
-    }
-  }
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 23rem;
+  height: 6.5rem;
+  padding-top: 0.5rem;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  margin-top: -1rem;
+  margin-left: -0.5rem;
+  border-radius: 1rem;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 
-  /* Large screens */
-  @media (min-width: 1024px) and (max-width: 1279px) {
-    .card {
-      width: 17rem;
-      height: 5.5rem;
-    }
-  }
+.overlay {
+  position: absolute;
+  inset: 0;
+  background-color: black;
+  opacity: 0.3;
+  border-radius: 1rem;
+}
 
-    /* Medium screens */
-    @media (min-width: 768px) and (max-width: 1023px) {
-      .card {
-        width: 17rem;
-        height: 5rem;
-      }
-    }
+.card-content {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
 
-     /* Small screens */
-  @media (max-width: 767px) {
-    .card {
-      width: 19rem;
-      height: 5.5rem;
+.card-title {
+  color: #ffffff;
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
+.card-subtitle {
+  margin-top: -0.25rem;
+  color: #ffffff80;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.region-text,
+.temp-text,
+.weather-text,
+.wind-text {
+  color: #ffffff80;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.region-value,
+.temp-value,
+.weather-value,
+.wind-value {
+  margin-top: -0.25rem;
+  color: #ffffff;
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
+.region-value {
+  margin-left: -0.75rem;
+}
+
+.wind-value {
+  margin-left: -0.75rem;
+}
+
+/* Extra large screens */
+@media (max-width: 1280px) {
+  .card {
+    width: 22rem;
+    height: 6rem;
   }
+}
+
+/* Large screens */
+@media (min-width: 1024px) and (max-width: 1279px) {
+  .card {
+    width: 17rem;
+    height: 5.5rem;
   }
-  
-  .overlay {
-    position: absolute;
-    inset: 0;
-    background-color: black;
-    opacity: 0.3;
-    border-radius: 1rem;
+}
+
+/* Medium screens */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .card {
+    width: 17rem;
+    height: 5rem;
   }
-  
-  .card-content {
-    position: relative;
-    display: flex;
-    justify-content: space-between;
+}
+
+/* Small screens */
+@media (max-width: 767px) {
+  .card {
+    width: 19rem;
+    height: 5.5rem;
   }
-  
-  .card-title {
-    color: #FFFFFF;
-    font-size: 1.125rem; /* xl:text-lg */
-    font-weight: 600; /* font-semibold */
-  }
-  
-  .card-subtitle {
-    margin-top: -0.25rem;
-    color: #FFFFFF80;
-    font-size: 0.75rem;
-    font-weight: 500; /* font-medium */
-  }
-  
-  .region-text, .temp-text, .weather-text, .wind-text {
-    color: #FFFFFF80;
-    font-size: 0.75rem;
-    font-weight: 500; /* font-medium */
-  }
-  
-  .region-value, .temp-value, .weather-value, .wind-value {
-    margin-top: -0.25rem;
-    color: #FFFFFF;
-    font-size: 1.125rem; /* xl:text-lg */
-    font-weight: 600; /* font-semibold */
-  }
-  
-  .region-value {
-    margin-left: -0.75rem;
-  }
-  
-  .wind-value {
-    margin-left: -0.75rem;
-  }
-  
+}

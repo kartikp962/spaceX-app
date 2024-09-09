@@ -1,9 +1,8 @@
 import React from "react";
-// import { DUMMY_FACILITIES } from '../constant';
 import upArrow from "../../assets/upArrow.png";
 import downArrow from "../../assets/downArrow.png";
 import { useDispatch, useSelector } from "react-redux";
-import "./LaunchFacilities.css"; // Import the CSS file
+import "./LaunchFacilities.css";
 import LaunchFacilitiesCard from "../LaunchFaciltiesCard/LaunchFaciltiesCard";
 import { DUMMY_FACILITIES } from "../../constants";
 import { checkLaunch } from "../../store/slices/checkSlice";
@@ -11,8 +10,6 @@ import { checkLaunch } from "../../store/slices/checkSlice";
 const LaunchFaciities = () => {
   const dispatch = useDispatch();
   const launchState = useSelector((state) => state.Check.data);
-
-  console.log("launchSTate", launchState);
 
   return (
     <div
@@ -29,14 +26,13 @@ const LaunchFaciities = () => {
       </div>
       {launchState ? (
         <button
-        className="button-container"
-        onClick={() => dispatch(checkLaunch(false))}
-      >
-        <img src={upArrow} alt="upArrow" />
-        <p className="button-text">less</p>
-      </button>
+          className="button-container"
+          onClick={() => dispatch(checkLaunch(false))}
+        >
+          <img src={upArrow} alt="upArrow" />
+          <p className="button-text">less</p>
+        </button>
       ) : (
-
         <button
           className="button-container"
           onClick={() => dispatch(checkLaunch(true))}
@@ -44,7 +40,6 @@ const LaunchFaciities = () => {
           <img src={downArrow} alt="downArrow" />
           <p className="button-text">more</p>
         </button>
-        
       )}
     </div>
   );

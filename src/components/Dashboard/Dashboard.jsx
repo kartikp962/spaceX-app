@@ -2,14 +2,11 @@ import React from "react";
 import LaunchCard from "../LaunchCard/LaunchCard";
 import "./Dashboard.css";
 import LaunchFaciities from "../LaunchFacilities/LaunchFacilities";
-import LaunchFacilitiesCard from "../LaunchFaciltiesCard/LaunchFaciltiesCard";
-import { DUMMY_FACILITIES } from "../../constants";
 import StarLink from "../StarLink/StarLink";
 import { useSelector } from "react-redux";
 
 const Dashboard = () => {
   const launchState = useSelector((state) => state.Check.data);
-  // const launchState = true;
   return (
     <div className="box-container">
       <div className="left-card-div">

@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from 'react';
-import './Rockets.css'; // Import the CSS file
-import RocketMainCard from '../RocketMainCard/RocketMainCard';
-import { ROCKET_API } from '../../constants';
+import React, { useEffect, useState } from "react";
+import "./Rockets.css";
+import RocketMainCard from "../RocketMainCard/RocketMainCard";
+import { ROCKET_API } from "../../constants";
 
 const Rockets = () => {
   const [rocketValue, setRocketValue] = useState([]);
@@ -17,8 +17,8 @@ const Rockets = () => {
   };
 
   return (
-    <div className='rockets-container'>
-      <div className='rockets-card-wrapper'>
+    <div className="rockets-container">
+      <div className="rockets-card-wrapper">
         {rocketValue.slice(1).map((i) => (
           <RocketMainCard key={i?.id} data={i} />
         ))}
