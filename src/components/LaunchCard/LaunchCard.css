@@ -1,0 +1,195 @@
+.upcoming-launch-container {
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.upcoming-launch-header {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.upcoming-launch-wrapper-upper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.upcoming-launch-info {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    margin-top: -1rem;
+}
+
+.launch-detail {
+    display: flex;
+    flex-direction: column;
+    margin-right: 2rem;
+}
+
+.launch-label, .launch-logo-label {
+    font-weight: 600;
+    font-size: 13px;
+    color: #a0a0a0;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-top: 1px;
+}
+
+.launch-logo-label {
+  margin-bottom: 5px;
+}
+
+.launch-value {
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+}
+
+/* Base styles */
+.launch-card-logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(63, 63, 63, 0.38); /* bg-[#33333361] */
+    border-radius: 1rem; /* rounded-2xl */
+  }
+  
+  /* Logo size and positioning */
+  .launch-card-logo-container img {
+    width: 6rem; /* Default width */
+  }
+  
+  /* Media queries for different screen sizes */
+  
+  /* Extra large screens */
+  @media (min-width: 1280px) {
+    .launch-card-logo-container {
+      height: 8.125rem; /* xl:h-[8.125rem] */
+      width: 8.125rem; /* xl:w-[8.125rem] */
+    }
+    .launch-card-logo-container img {
+      width: 5rem; /* xl:w-20 */
+    }
+  }
+  
+  /* Large screens */
+  @media (min-width: 1024px) and (max-width: 1279px) {
+    .launch-card-logo-container {
+      height: 6rem; /* lg:h-[6rem] */
+      width: 6rem; /* lg:w-[6rem] */
+    }
+    .launch-card-logo-container img {
+      width: 4.5rem; /* lg:w-18 */
+    }
+    .launch-detail {
+      margin-right: 0;
+    }
+  }
+  
+  /* Medium screens */
+  @media (min-width: 768px) and (max-width: 1023px) {
+    .launch-card-logo-container {
+      height: 6rem; /* md:h-[6rem] */
+      width: 6rem; /* md:w-[6rem] */
+    }
+    .launch-card-logo-container img {
+      width: 5rem; /* md:w-[20rem] */
+    }
+    .launch-detail {
+      margin-right: 0;
+    }
+  }
+
+  /* Small screens */
+  @media (max-width: 767px) {
+    .launch-detail {
+      margin-right: 0;
+    }
+  }
+
+.loader {
+    margin: auto;
+    margin-top: 10vh;
+}
+
+ .upcoming-launch-links {
+    display: flex;
+    gap: 10px;
+    font-size: 14px;
+}
+
+.launch-link i {
+    font-size: 20px;
+    color: #fff;
+}
+
+
+/* Base Styles */
+.links-section p {
+    color: rgba(255, 255, 255, 0.5); /* text-[#FFFFFF80] */
+    font-size: 0.875rem; /* text-sm */
+  }
+  
+  .links-container {
+    display: flex;
+    margin-left: 0.25rem; /* ml-1 */
+  }
+  
+  .link-icon,
+  .link-placeholder {
+    display: flex;
+    background-color: white; /* bg-white */
+    border-radius: 50%; /* rounded-full */
+    margin-right: 0.5rem; /* mr-2 */
+    width: 1.5rem; /* Default width for md screens */
+    height: 1.5rem; /* Default height for md screens */
+  }
+  
+  .link-icon img,
+  .link-placeholder img {
+    padding: 0.1rem; /* p-[0.1rem] or p-[0.20rem] */
+  }
+  
+  .link-placeholder {
+    cursor: not-allowed; /* cursor-not-allowed */
+    opacity: 0.25; /* opacity-25 */
+  }
+  
+  /* Media Queries */
+  
+  /* Extra large screens */
+  @media (min-width: 1280px) {
+    .links-section p {
+      font-weight: 500; /* xl:font-medium */
+    }
+  
+    .link-icon,
+    .link-placeholder {
+      width: 1.5rem; /* xl:w-6 */
+      height: 1.5rem; /* xl:h-6 */
+    }
+  }
+  
+  /* Large screens */
+  @media (min-width: 1024px) and (max-width: 1279px) {
+    .link-icon,
+    .link-placeholder {
+      width: 1.25rem; /* lg:w-5 */
+      height: 1.25rem; /* lg:h-5 */
+    }
+  }
+  
+  /* Medium screens */
+  @media (min-width: 768px) and (max-width: 1023px) {
+    .link-icon,
+    .link-placeholder {
+      width: 1.5rem; /* md:w-6 */
+      height: 1.5rem; /* md:h-6 */
+    }
+  }
+  

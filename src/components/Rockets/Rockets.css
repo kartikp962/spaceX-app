@@ -1,0 +1,43 @@
+/* Base styles */
+.rockets-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 2.5rem; /* xl:mt-10, lg:mt-10, md:mt-5 */
+}
+
+.rockets-card-wrapper {
+  background-color: rgba(0, 0, 0, 0.5); /* bg-[#00000080] */
+  border-radius: 1rem; /* rounded-2xl */
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.25); /* drop-shadow-2xl */
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* Media queries for different screen sizes */
+
+/* Extra large screens */
+@media (min-width: 1280px) {
+  .rockets-card-wrapper {
+    width: 51rem; /* xl:w-[51rem] */
+    height: 28rem; /* xl:h-[28rem] */
+  }
+}
+
+/* Large screens */
+@media (min-width: 1024px) and (max-width: 1279px) {
+  .rockets-card-wrapper {
+    width: 42rem; /* lg:w-[42rem] */
+    height: 25rem; /* lg:h-[25rem] */
+  }
+}
+
+/* Medium screens */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .rockets-card-wrapper {
+    width: 43rem; /* md:w-[43rem] */
+    height: 28rem; /* md:h-[28rem] */
+    margin-top: 1.25rem; /* md:mt-5 */
+  }
+}
